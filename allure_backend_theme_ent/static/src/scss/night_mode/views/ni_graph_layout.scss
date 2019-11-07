@@ -1,0 +1,9 @@
+@mixin sync_graph_layout() {
+    .o_graph_renderer {
+        .o_graph_canvas_container {
+            canvas {
+                background-color: $btn-secondary;
+            }
+        }
+    }
+}

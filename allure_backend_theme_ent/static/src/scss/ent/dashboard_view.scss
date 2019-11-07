@@ -1,0 +1,76 @@
+@mixin ent-dashboard-view(){
+    .o_dashboard_view{
+        padding: 5px 0px;
+        .o_subview{
+            max-width: 100%;
+            display: block;
+            overflow: auto;
+            position: relative;
+            // all layout button [start]
+            .o_graph_buttons, .o_cohort_buttons, .o_pivot_buttons{
+                .btn-group{
+                    position: initial;
+                    .btn-outline-secondary{
+                        border: 1px solid $brand-secondary;
+                        color: $brand-secondary;
+                        background-color: transparent;
+                        &:hover{
+                            background-color: $brand-secondary;
+                            color: $white;
+                        }
+                    }
+                    .btn-secondary{
+                        color: $brand-secondary !important;
+                        &.active{
+                            border: 1px solid $brand-secondary;
+                            color: $white !important;
+                        }
+                        &:hover{
+                            color: $white !important;
+                        }
+                    }
+                    .o_graph_groupbys_menu{
+                        .btn.dropdown-toggle{
+                            .fa.fa-chevron-right{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .o_button_switch{
+                    border: 1px solid $brand-secondary;
+                    color: $brand-secondary;
+                    background-color: transparent;
+                    &:hover{
+                        background-color: $brand-secondary;
+                        color: $white;
+                    }
+                }
+            }
+            // pivot layout [start]
+            @include pivot_view();
+        }
+        .o_pivot.o_view_controller{
+            max-width: 100%;
+            display: block;
+            overflow: auto;
+        }
+        .o_group{
+            .o_aggregate, .o_formula{
+                border-left: 0;
+                margin-right: 5px;
+                background-color: $tr-hover;
+                .o_value{
+                    &:after{
+                        opacity: 1;
+                    }
+                }
+            }
+            .o_has_widget{
+                .o_pie_chart{
+                    border-left: 0;
+                }
+            }
+        }
+    }
+}

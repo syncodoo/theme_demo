@@ -1,0 +1,272 @@
+@mixin end-document-view(){
+	&.o_documents_kanban{
+		.o_documents_selector{
+			overflow: auto;
+		}
+		.o_kanban_view.o_documents_kanban_view{
+			margin-bottom: 0;
+			.oe_kanban_global_area{
+				.o_kanban_image {
+					width: 80px;
+					height: auto;
+					overflow: hidden;
+				}
+			}
+			.o_record_selected{
+				box-shadow: none;
+			}
+		}
+		.o_document_chatter{
+			height: 100%;
+			.o_chatter {
+			    min-width: 100%;
+			    max-width: 100%;
+			    border: 0;
+			    border-top: 1px solid $border;
+			    background-color: $white;
+			    padding: 10px !important;
+			    margin-bottom: 10px;
+			    .o_thread_message_avatar {
+			        @include round-border();
+			    }
+			    & > .o_chatter_topbar {
+			        margin-top: 0;
+			        height: 40px;
+			        flex-wrap: wrap;
+			        & > button.o_active {
+			            background-color: transparent;
+			            border: 0;
+			            color: darken($link, 7%);
+			            @include border-animation();
+			        }
+			        & > button {
+			            height: 40px;
+			            border-bottom: 0;
+			            color: $link;
+			            &:hover {
+			                color: darken($link, 7%);
+			            }
+			        }
+			        & > .o_followers {
+			            height: 40px;
+			            border-bottom: 0;
+			            .o_followers_title_box {
+			                .o_followers_list {
+			                    padding: 5px;
+			                    border-radius: 0;
+			                    & > li {
+			                        & > a {
+			                            &:hover {
+			                                background-color: $tr-hover;
+			                            }
+			                        }
+			                        &.o_partner {
+			                            .o_edit_subtype, .o_remove_follower {
+			                                color: $icon;
+			                            }
+			                        }
+			                    }
+			                }
+			            }
+			            .o_followers_actions {
+			                .o_subtypes_list {
+			                    .o_followers_following {
+			                        width: auto;
+			                    }
+			                    & > .dropdown-menu {
+			                        border-radius: 0;
+			                    }
+			                }
+			            }
+			        }
+			        & > .o_topbar_right_area {
+			            border-bottom: 0;
+			        }
+			    }
+			    & > .o_thread_composer {
+			        background-color: transparent;
+			        border: 0;
+			        border-bottom: 1px solid $border;
+			        .o_composer_container {
+			            .o_composer {
+			                border: 0;
+			                .o_chatter_composer_tools {
+			                    border: 0;
+			                    transform: translateY(0px);
+			                    button {
+			                        &:focus, &:active, &:hover {
+			                            box-shadow: none;
+			                            background-color: transparent;
+			                            color: $brand-primary;
+			                        }
+			                    }
+			                    & > button {
+			                        opacity: 1;
+			                        color: $brand-primary;
+			                    }
+			                }
+			                .o_composer_input {
+			                    textarea {
+			                        border-bottom: 1px solid $border;
+			                        &:focus {
+			                            @include border-animation();
+			                        }
+			                    }
+			                }
+			                .o_mail_emoji_container {
+			                    position: absolute;
+			                    bottom: 45%;
+			                    width: 250px;
+			                    left: 0;
+			                    background: $white;
+			                    border: 1px solid $border;
+			                    padding: 10px;
+			                    overflow-y: auto;
+			                    & > button {
+			                        margin: 0 0 8px 0;
+			                        padding: 0;
+			                        height: 25px;
+			                        width: 25px;
+			                        img {
+			                            width: 20px;
+			                            height: 20px;
+			                        }
+			                    }
+			                }
+			            }
+			            .o_composer_attachments_list {
+			                .o_attachments {
+			                    .o_image_box {
+			                        &:hover {
+			                            background-color: $tr-hover;
+			                        }
+			                    }
+			                    .o_attachment_delete {
+			                        color: $icon;
+			                        background: $brand-secondary;
+			                    }
+			                }
+			            }
+			        }
+			    }
+			    & > .o_mail_activity {
+			        .o_thread_date_separator {
+			            .o_thread_date.btn {
+			                box-shadow: none;
+			                border: 0;
+			                .o_chatter_planned_activities_summary {
+			                    .label-danger {
+			                        background-color: $text-danger;
+			                    }
+			                    .label-warning {
+			                        background-color: $text-warning;
+			                    }
+			                    .label-sucess {
+			                        background-color: $text-success;
+			                    }
+			                }
+			            }
+			            .o_thread_date {
+			                color: $Label;
+			            }
+			        }
+			        #o_chatter_planned_activities {
+			            .o_thread_message {
+			                .o_thread_message_sidebar {
+			                    .bg-warning-full {
+			                        background-color: $text-warning;
+			                    }
+			                    .bg-success-full {
+			                        background-color: $text-success;
+			                    }
+			                    .bg-danger-full {
+			                        background-color: $text-danger;
+			                    }
+			                }
+			                .o_thread_message_core {
+			                    .o_mail_info {
+			                        strong {
+			                            .o_activity_color_today {
+			                                color: $text-warning;
+			                            }
+			                            .o_activity_color_planned {
+			                                color: $text-success;
+			                            }
+			                            .o_activity_color_overdue {
+			                                color: $text-danger;
+			                            }
+			                        }
+			                        .o_activity_info {
+			                            background-color: transparent;
+			                            color: $text-muted;
+			                            opacity: 1;
+			                            &[aria-expanded="true"] {
+			                                .fa {
+			                                    color: $brand-secondary;
+			                                }
+			                            }
+			                        }
+			                        .o_thread_message_collapse {
+			                            .dl-horizontal {
+			                                background-color: $tr-hover;
+			                                border-radius: 0px;
+			                                box-shadow: none;
+			                                border: 1px solid $border;
+			                                padding: 19px;
+			                                .o_activity_color_today {
+			                                    color: $text-warning;
+			                                }
+			                                .o_activity_color_planned {
+			                                    color: $text-success;
+			                                }
+			                                .o_activity_color_overdue {
+			                                    color: $text-danger;
+			                                }
+			                                dt, b, strong {
+			                                    color: $form-label-color;
+			                                }
+			                            }
+			                        }
+			                    }
+			                }
+			            }
+			        }
+			    }
+			    & > .o_mail_thread {
+			        .o_mail_thread_content {
+			            .o_thread_date_separator {
+			                border-bottom: 1px solid $border;
+			                .o_thread_date {
+			                    color: $Label;
+			                }
+			            }
+			            .o_thread_message {
+			                background-color: $white;
+			                .o_mail_note {
+			                    background-color: transparent;
+			                    border: 0;
+			                }
+			                .o_thread_message_core {
+			                    .o_mail_info {
+			                        color: $normal-color;
+			                        strong {
+			                            color: $Label-value;
+			                            & > a {
+			                                color: $Label-value;
+			                            }
+			                        }
+			                        .o_thread_icons {
+			                            .o_thread_message_star {
+			                                color: gold;
+			                                opacity: 1;
+			                            }
+			                        }
+			                    }
+			                }
+			            }
+			        }
+			    }
+			}
+		}
+	}
+}

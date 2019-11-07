@@ -1,0 +1,107 @@
+/*body.o_web_client > .o_action_manager > .o_view_controller .o_control_panel > .o_search_options .ad_has_options .o_dropdown.ad_active.show > .dropdown-menu{
+	height: calc(100vh - 115px);
+}
+body.o_web_client.oe_base_menu > .o_action_manager > .o_view_controller .o_control_panel > .o_search_options .ad_has_options .o_dropdown.ad_active.show > .dropdown-menu{
+	height: calc(100vh - 140px);
+	max-height: calc(100vh - 140px);
+}
+body.o_web_client > .o_action_manager > .o_view_controller .o_control_panel .o_cp_sidebar > .btn-group > .o_dropdown > div.dropdown-menu{
+	max-height: calc(100vh - 152px);
+}
+.o_web_client header .o_main_navbar .o_quick_menu > li.o_gb_search > ul.dropdown-menu > li.o_global_search .oe-global-autocomplete > ul{
+	height: calc(100vh - 90px);
+}
+.o_thread_composer.o_chat_mini_composer .o_composer .o_mail_emoji_container{
+	max-height: calc(100vh - 400px);
+}
+.o_search_options .ad_has_options .o_favorites_menu , .o_search_options .ad_has_options .o_filters_menu, .o_search_options .ad_has_options .o_group_by_menu{
+	max-height: calc(100vh - 115px);
+}
+body.o_web_client .o_action_manager .o_view_controller.o_action > .o_content .o_form_view .oe_chatter.o_chatter > .o_chat_composer .o_composer_container .o_composer .o_mail_emoji_container, .o_web_client .o_action_manager .o_view_controller.o_action > .o_content .o_form_view .oe_chatter.o_chatter > .o_chat_composer .o_composer_container .o_composer .o_mail_emoji_container{
+	max-height: calc(100vh - 300px);
+}
+body.o_web_client.modal-open .modal-dialog .modal-content .modal-body.o_act_window .o_modal_header .o_search_options > .btn-group ul.dropdown-menu {
+	max-height: calc(100vh - 300px);
+}
+body.o_web_client.ad_mobile .o_action_manager .o_view_controller.o_action > .o_content .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .o_hr_attendance_back_button {
+	left: calc(50% - 20px);
+}
+body.o_web_client.ad_mobile:not(.ad_full_view) .o_action_manager .o_view_controller{
+	flex-basis: calc(100% + 50px);
+}
+body.o_web_client:not(.oe_base_menu) .o_main_navbar > :not(.o_menu_sections):not(#av_full_view):not(.oe_full_button) {
+	max-height: calc(100vh - 55px);
+}
+body.o_web_client.oe_base_menu header .main_navbar .o_quick_menu > li.o_gb_search > ul.dropdown-menu > li.o_global_search .oe-global-autocomplete > ul {
+	height: calc(100vh - 125px);
+}
+body.o_web_client.ad_mobile.oe_base_menu.open_mobile_menu > header .o_main_navbar:not(.oe_favorite_view) > .oe_menu_layout > ul.o_menu_systray > li .dropdown-menu {
+    height: calc(100vh - 80px);
+}
+@media only screen and (max-width: 767px) {
+	body.o_web_client:not(.ad_mobile):not(.ad_full_view) .o_action_manager .o_view_controller{
+		flex-basis: calc(100% + 50px);
+	}
+	body.o_web_client.oe_base_menu.open_mobile_menu:not(.ad_mobile) > header .o_main_navbar:not(.oe_favorite_view) > .oe_menu_layout > ul.o_menu_systray > li .dropdown-menu {
+	    height: calc(100vh - 80px);
+	}
+}
+@media only screen and (max-width: 991px) {
+	body.o_web_client.oe_base_menu.open_mobile_menu:not(.ad_mobile) > header .o_main_navbar:not(.oe_favorite_view) > .oe_menu_layout > ul.o_menu_systray > li .dropdown-menu {
+	    height: calc(100vh - 80px);
+	}
+}*/
+
+body.o_web_client:not(.oe_base_menu) > .o_action_manager > .o_action .o_control_panel > .o_search_options .o_dropdown.ad_active > .dropdown-menu{
+    height: calc(100vh - 125px);
+}
+body.o_web_client.ad-chat-window:not(.oe_base_menu) > .o_action_manager > .o_action .o_control_panel > .o_search_options .o_dropdown.ad_active > .dropdown-menu{
+    height: calc(100vh - 160px);
+}
+body.o_web_client.oe_base_menu > .o_action_manager > .o_action > .o_cp_controller > .o_control_panel > .o_search_options .o_dropdown.ad_active > .dropdown-menu{
+    height: calc(100vh - 150px);
+}
+body.o_web_client.ad-chat-window > .o_action_manager > .o_action > .o_cp_controller > .o_control_panel .o_cp_sidebar > .btn-group{
+    bottom: 85px;
+}
+body.o_web_client.ad-chat-window:not(.oe_base_menu) > .o_action_manager > .o_action .o_control_panel .o_cp_sidebar > .btn-group > .o_dropdown > div.dropdown-menu {
+    max-height: calc(100vh - 160px);
+}
+body.o_web_client.oe_base_menu.ad-chat-window > .o_action_manager > .o_action > .o_cp_controller > .o_control_panel > .o_search_options .o_dropdown.ad_active > .dropdown-menu {
+    max-height: calc(100vh - 194px);
+}
+body.o_web_client.ad-chat-window.oe_base_menu > .o_action_manager > .o_action .o_control_panel .o_cp_sidebar > .btn-group > .o_dropdown > div.dropdown-menu {
+    max-height: calc(100vh - 195px);
+}
+body.o_web_client:not(.oe_base_menu) > .o_action_manager > .o_action .o_control_panel .o_cp_sidebar > .btn-group > .o_dropdown > div.dropdown-menu{
+    max-height: calc(100vh - 118px);
+}
+body.o_web_client.oe_base_menu > .o_action_manager > .o_action .o_control_panel .o_cp_sidebar > .btn-group > .o_dropdown > div.dropdown-menu{
+    max-height: calc(100vh - 152px);
+}
+.o_thread_composer.o_chat_mini_composer .o_composer .o_mail_emoji_container{
+    max-height: calc(100vh - 400px);
+}
+body.o_web_client .o_action_manager .o_action.o_view_controller > .o_content .o_form_view .oe_chatter.o_chatter > .o_chat_composer .o_composer_container .o_composer .o_mail_emoji_container, .o_web_client .o_action_manager .o_action.o_view_controller > .o_content .o_form_view .oe_chatter.o_chatter > .o_chat_composer .o_composer_container .o_composer .o_mail_emoji_container{
+    max-height: calc(100vh - 300px);
+}
+body.o_web_client.modal-open .modal-dialog .modal-content .modal-body.o_act_window .o_modal_header .o_search_options .ad_has_options > .btn-group ul.dropdown-menu {
+    max-height: calc(100vh - 300px);
+}
+body.o_web_client.ad_mobile .o_action_manager .o_action.o_view_controller  > .o_content .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode .o_hr_attendance_back_button {
+    left: calc(50% - 20px);
+}
+body.o_web_client.ad_mobile:not(.ad_full_view) .o_action_manager .o_view_controller{
+    flex-basis: calc(100% + 50px);
+}
+body.o_web_client.ad_mobile.oe_base_menu.open_mobile_menu > header .o_main_navbar:not(.oe_favorite_view) > .oe_menu_layout > ul.o_menu_systray > li .dropdown-menu {
+    height: calc(100vh - 80px);
+}
+body.o_web_client:not(.oe_base_menu) .o_main_navbar > :not(.o_menu_sections):not(#av_full_view):not(.oe_full_button) {
+    max-height: calc(100vh - 55px);
+}
+@media only screen and (max-width: 767px) {
+    body.o_web_client:not(.ad_mobile):not(.ad_full_view) .o_action_manager .o_action.o_view_controller {
+        flex-basis: calc(100% + 50px);
+    }
+}

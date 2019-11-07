@@ -1,0 +1,74 @@
+@mixin sync_activity_layout() {
+    .o_activity_view {
+        background-color: $btn-secondary;
+
+        &.table-responsive {
+            table {
+                background-color: transparent;
+                thead, tfoot {
+                    background: $night;
+
+                    & > tr {
+                        & > th, & > td {
+                            border: 0;
+                            color: $font-color;
+                        }
+                    }
+                }
+
+                tbody {
+                    & > tr {
+                        background-color: $btn-secondary;
+                        color: $font-color;
+
+                        & > td {
+                            border-color: $border;
+
+                            &.o_res_name_cell {
+                                color: $night-hover;
+                            }
+                            &.o_activity_summary_cell:not(.planned) {
+                                &:hover {
+                                    background-color: $night-light;
+                                    .fa {
+                                        color: $font-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .o_activity {
+            padding: 0 !important;
+            border-color: $border !important;
+            .dropdown-item {
+                .o_activity_log {
+                    margin-bottom: 0 !important;
+                    .o_activity_label {
+                        background-color: $night;
+                        border: 0;
+                    }
+                    .o_log_activity {
+                        background-color: $btn-secondary;
+                        .o_activity_title {
+                            color: $font-color;
+                            .o_activity_title_entry {
+                                color: $font-color;
+                                .text-dark, .fa {
+                                    color: $font-color !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// apply diract to not effect to other apply class color on o_activity_summary_cell
+.oe_night_mode .o_activity_view td.o_activity_summary_cell {
+    background-color: $btn-secondary;
+}

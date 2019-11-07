@@ -1,0 +1,84 @@
+@mixin gernal_setting_view() {
+    .oe_form_configuration {
+        .o_control_panel {
+            background-color: $night-light;
+            border: 0;
+            .o_panel {
+                .o_setting_search {
+                    input {
+                        background-color: $btn-secondary;
+                        padding: 0 10px;
+                    }
+                }
+            }
+
+            .o_form_statusbar {
+                background-color: $night-light !important;
+                border-top: 0 !important;
+            }
+        }
+
+        .o_setting_container {
+            .settings_tab {
+                background-color: $btn-secondary;
+                border-right: 1px solid $border;
+
+                .tab {
+                    .app_name {
+                        color: $font-color;
+                    }
+                    &.selected, &:hover {
+                        background-color: $night;
+                        box-shadow: inset 3px 0 0 $btn-primary;
+                    }
+                }
+            }
+            .settingSearchHeader {
+                background-color: $night;
+            }
+            .settings {
+                background-color: $btn-secondary;
+
+                & > .app_settings_block h2 {
+                    background-color: transparent;
+                    color: $font-color;
+                }
+
+                .o_settings_container {
+                    .o_setting_right_pane {
+                        border-color: $border;
+
+                        .o_form_label {
+                            color: $font-color;
+                        }
+
+                        select.o_input, input, .o_input {
+                            border: 0;
+                            background-color: $night !important;
+                            color: $font-color;
+
+                            &::placeholder {
+                                color: $font-color;
+                            }
+
+                            .badge {
+                                background-color: $btn-secondary;
+                                color: $font-color;
+                                box-shadow: inset 0 0 0 2px $font-color;
+                            }
+                        }
+
+                        .badge.badge-primary {
+                            background-color: $btn-primary;
+                            color: $font-color;
+                        }
+
+                        .btn-link {
+                            color: $btn-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

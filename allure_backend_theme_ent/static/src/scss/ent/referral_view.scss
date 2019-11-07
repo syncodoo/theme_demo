@@ -1,0 +1,38 @@
+@mixin referral_view_ent() {
+    &.o_referral_kanban {
+        background-color: transparent !important;
+        .o_kanban_referral {
+            background-color: transparent !important;
+            margin-bottom: 0;
+            position: relative;
+            .o_kanban_record {
+                min-width: auto;
+                flex: 1 1 350px;
+                width: auto;
+                max-width: initial;
+                .o_to_share {
+                    & > a {
+                        border: none;
+                        .fa {
+                            color: $Label-value;
+                        }
+                        &:hover {
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+            .o_view_nocontent {
+                .o_nocontent_help .o_view_nocontent_smiling_face {
+                    color: $white;
+                    &:before {
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .o_referral_kanban_background  {
+            right: 0;
+        }
+    }
+}

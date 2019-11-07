@@ -1,0 +1,217 @@
+@mixin sync_kanban_view() {
+    .o_kanban_view {
+        background-color: $btn-secondary;
+
+        .o_kanban_mobile_tabs {
+            background-color: $btn-primary;
+            .o_kanban_mobile_tab {
+                &.o_current {
+                    background: unset;
+                    border-bottom: 2px solid $font-color;
+                }
+            }
+        }
+        .o_kanban_group {
+            border-right: 0;
+            .o_kanban_header {
+                border-bottom: 0;
+                .o_kanban_header_title {
+                    color: $font-color;
+
+                    .o_kanban_config, .o_kanban_quick_add {
+                        i {
+                            color: $font-color;
+                        }
+                    }
+                    .o_column_title , .o_kanban_quick_add .fa-plus , .o_kanban_config .fa-gear {
+                        color: $font-color;
+                    }
+                }
+
+                .o_kanban_counter {
+                    .o_kanban_counter_progress {
+                        background-color: $night-light;
+                    }
+
+                    .o_kanban_counter_side {
+                        color: $font-color;
+                    }
+                }
+            }
+
+            .o_kanban_quick_create {
+                background-color: $night;
+                color: $font-color;
+                border-color: $border;
+
+                .o_view_controller {
+                    .o_form_view {
+                        background-color: transparent;
+                    }
+                }
+            }
+
+            .o_kanban_record {
+                border-color: $border;
+                background-color: $night;
+
+                .o_kanban_record_title {
+                    color: $font-color;
+                }
+
+                .o_kanban_tags {
+                    .o_tag {
+                        color: $font-color;
+                    }
+                }
+                .oe_kanban_content {
+                    .o_kanban_record_title {
+                        color: $btn-primary;
+                    }
+                }
+            }
+
+            &.o_column_folded {
+                background-color: $night;
+
+                .o_kanban_header {
+                    .o_kanban_header_title, .o_column_title {
+                        color: $font-color;
+
+                        .o_column_unfold {
+                            i {
+                                color: $font-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .o_column_quick_create {
+            background-color: transparent;
+            .o_quick_create_unfolded {
+                background-color: $btn-secondary;
+
+                .o_kanban_muted_record {
+                    background-color: $night;
+                }
+                .o_kanban_header {
+                    .input-group {
+                        background-color: transparent;
+                    }
+                }
+            }
+            .o_quick_create_folded {
+                .o_kanban_add_column {
+                    background-color: transparent !important;
+                    .fa-plus {
+                        color: $font-color;
+                    }
+                }
+
+                .o_kanban_title {
+                    color: $font-color;
+                }
+            }
+        }
+
+        .o_kanban_record {
+            background-color: $night;
+            color: $font-color;
+            border-color: $border;
+
+            .o_kanban_image , .o_kanban_image_full {
+                background-color: $font-color;
+            }
+
+            .o_kanban_card_content {
+                .bottom_block {
+                    background-color: $night;
+                }
+                .o_kanban_primary_right .oe_kanban_action_a {
+                    color: $btn-primary;
+                }
+            }
+
+            .o_event_left {
+                background-color: $btn-primary;
+                color: $font-color;
+            }
+
+            &.o_dropdown_open {
+                .o_kanban_manage_toggle_button {
+                    background-color: $btn-primary;
+                    color: $font-color;
+                    border-color: $border;
+                }
+            }
+
+            .dropdown.show {
+                .dropdown-toggle {
+                    background-color: $btn-primary;
+                    color: $font-color;
+                    border-color: $border;
+                }
+            }
+
+            .o_kanban_card_manage_pane.container {
+                div[class*="col-"] {
+                    & > div:not(.o_kanban_card_manage_title) {
+                        & > a {
+                            color: $font-color;
+
+                            &:hover {
+                                background-color: $btn-primary;
+                                color: $font-color;
+                            }
+                        }
+                    }
+                }
+
+                .row.o_kanban_card_manage_settings {
+                    div.text-right {
+                        & > a {
+                            color: $font-color;
+
+                            &:hover {
+                                background-color: $btn-primary;
+                                color: $font-color;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .oe_kanban_details, .o_kanban_record_headings {
+                .o_kanban_record_title {
+                    color: $btn-primary;
+                }
+            }
+
+            .o_kanban_record_title {
+                color: $font-color;
+            }
+        }
+    }
+    .o_lunch_kanban {
+        .o_lunch_kanban_banner {
+            background-color: $btn-secondary;
+            border-color: $border;
+            .card-body {
+                color: $font-color;
+            }
+        }
+    }
+    .o_hr_attendance_kiosk_mode_container .o_hr_attendance_kiosk_mode {
+        background-color: $btn-secondary;
+    }
+    .o_timeoff_container {
+        .o_timeoff_card {
+            color: $font-color;
+            .o_timeoff_purple {
+                color: $btn-primary;
+            }
+        }
+    }
+}

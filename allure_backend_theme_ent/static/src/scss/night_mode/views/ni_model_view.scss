@@ -1,0 +1,162 @@
+@mixin sync_model_view() {
+    .modal {
+        background-color: rgba($btn-primary,0.4);
+        .modal-dialog {
+            .modal-content {
+                .modal-header, .modal-footer {
+                    background-color: $night !important;
+                    color: $font-color;
+                    border-radius: 0;
+                    border-color: $border;
+                    .modal-title {
+                        color: $font-color;
+                    }
+                    .close {
+                        color: $font-color;
+                    }
+                }
+
+                .modal-body {
+                    background-color: $btn-secondary;
+                    color: $font-color;
+                    @include sync_form_view();
+                    @include sync_list_view();
+                    @include sync_control_panel_layout();
+                    .o_view_controller {
+                        .o_cp_controller {
+                            .o_control_panel {
+                                background-color: $night-light;
+                                .o_searchview {
+                                    background-color: $night-light;
+                                    .o_searchview_input_container {
+                                        .o_searchview_input {
+                                            padding-left: 5px;
+                                        }
+                                    }
+                                }
+                                .o_cp_pager {
+                                    .o_pager {
+                                        .btn-group {
+                                            .btn-secondary {
+                                                color: $font-color;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        @include sync_form_view();
+                        @include sync_list_view();
+                    }
+
+                    .o_modal_header {
+                        .o_searchview {
+                            background-color: $night;
+                            color: $font-color;
+                            border: 0;
+
+                            .o_searchview_input_container {
+                                .o_searchview_facet {
+                                    .o_searchview_facet_label {
+                                        color: $font-color;
+                                        background-color: $btn-primary;
+                                        border: 0;
+                                    }
+
+                                    .o_facet_values {
+                                        background-color: $night-light;
+                                        color: $font-color;
+                                    }
+
+                                    .o_facet_remove {
+                                        color: $font-color;
+                                    }
+                                }
+                            }
+
+                            .o-selection-focus {
+                                background-color: $btn-primary;
+                            }
+                        }
+
+                        .o_search_options {
+                            .dropdown-menu {
+                                .o_menu_item {
+                                    a {
+                                        color: $font-color;
+                                    }
+                                }
+                            }
+
+                            .o_dropdown {
+                                &.show {
+                                    .btn {
+                                        background-color: $btn-primary;
+                                        color: $font-color;
+                                    }
+
+                                    .custom-checkbox {
+                                        .custom-control-label {
+                                            &:before {
+                                                outline: 1px solid $font-color;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .o_subtype.dropdown-item {
+                        color: $font-color;
+
+                        .custom-checkbox {
+                            .custom-control-label {
+                                color: $font-color;
+
+                                &:before {
+                                    outline: 1px solid $checkbox;
+                                }
+                            }
+                        }
+
+                        &:hover, &:active, &:focus {
+                            background-color: $btn-primary;
+                        }
+                    }
+
+                    .o_mobile_search_show_result {
+                        background-color: $btn-primary !important;
+                    }
+
+                    &.o_kanban_examples_dialog {
+                        .o_kanban_examples_dialog_nav {
+                            border-color: $border;
+
+                            .nav.nav-pills {
+                                .nav-item {
+                                    border-color: $border;
+
+                                    .nav-link {
+                                        background-color: $night-light;
+                                        color: $font-color;
+
+                                        &.active {
+                                            background-color: $btn-primary;
+                                            color: $font-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .o_error_detail {
+                        background-color: $night;
+                        border-color: $border;
+                    }
+                }
+            }
+        }
+    }
+}

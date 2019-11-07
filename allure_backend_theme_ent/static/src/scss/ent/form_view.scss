@@ -1,0 +1,160 @@
+@mixin domain-node-field(){
+	.o_domain_node{
+		.o_field_selector_popover{
+			.o_field_selector_popover_header{
+				background-color: $brand-secondary;
+				&:before{
+					border-bottom-color: $brand-secondary;
+				}
+				.o_field_selector_popover_option{
+					border-left: 1px solid $brand-secondary;
+					&:hover{
+						background: $brand-secondary;
+					}
+				}
+			}
+			.o_field_selector_popover_footer{
+				background: transparent;
+			}
+		}
+	}
+}
+@mixin ent-form-view(){
+	.o_form_view{
+		.o_form_sheet_bg{
+			background: transparent;
+			.o_cu_panel{
+				.flex-column-reverse{
+					width: 100%;
+				}
+				.o_ma_hierarchy{
+					.o_ma_scheduled{
+						background: $brand-secondary;
+					}
+					.o_ma_text_scheduled{
+						color: $brand-secondary;
+					}
+				}
+			}
+			.o_form_sheet{
+				@include domain-node-field();
+				box-shadow: none;
+				border: 0;
+				.mps_table{
+					& > thead{
+						& > tr{
+							background-color: transparent;
+							font-weight: bold;
+							& > td{
+								background-color: transparent;
+							}
+						}
+					}
+					& > tbody{
+						& > tr{
+							input{
+								border: 0;
+								border-bottom: 1px solid $border;
+								&:focus{
+									@include border-animation();
+								}
+							}
+						}
+					}
+				}
+				.o_reconciliation_lines{
+					.accounting_view{
+						thead{
+							& > tr{
+								& > td{
+									background-color: $tr-hover;
+								}
+							}
+						}
+					}
+					.match{
+						& > div{
+							border: 1px solid $border;
+							border-radius: 0;
+							.add_line_container{
+								color: $brand-secondary;
+							}
+							.match_controls{
+								.btn-secondary{
+									border: 0;
+									&:hover{
+										background-color: transparent;
+										color: $brand-secondary;
+									}
+								}
+							}
+						}
+					}
+					.o_reconciliation_line{
+						.add_line_container{
+							color: $brand-secondary;
+						}
+					}
+				}
+			}
+		}
+		.page.o_form_sheet_bg{
+			.o_form_sheet{
+				max-width: 100%;
+				min-width: auto;
+			}
+		}
+		.o_sign_flat_o2m{
+			.table-responsive{
+				.o_list_view_ungrouped{
+					.ui-sortable{
+						tr{
+							& > td{
+								border-top: 0;
+							}
+							&:hover{
+								background-color: transparent;
+							}
+						}
+					}
+				}
+			}
+		}
+		.o_cu_panel{
+			.o_ma_hierarchy{
+				margin-left: 0;
+			    margin-right: 0;
+			    background-color: $tr-hover;
+				.o_field_one2many{
+					.o_kanban_view{
+						.o_kanban_record{
+							border-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+		.o_project_timesheet_app_bg{
+			background: transparent;
+			.o_form_sheet{
+				box-shadow: none;
+				border: 0;
+			}
+		}
+	}
+}
+@mixin account-dashboard(){
+	.o_account_contract_dashboard{
+		padding: 10px;
+		div.box{
+			box-shadow: none;
+			border-bottom: 1px solid $border;
+		}
+		div.o_stat_box:hover, div.o_forecast_box:hover{
+			background-color: $tr-hover;
+		}
+		.o_blue{
+			color: $brand-secondary;
+		}
+	}
+}

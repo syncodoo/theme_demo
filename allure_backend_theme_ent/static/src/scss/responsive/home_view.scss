@@ -1,0 +1,10 @@
+@mixin home_view{
+	.o_home_menu{
+		width: 100%;
+		@include slide-animation();
+	}
+}
+
+.o_web_client.o_home_menu_background.ad_mobile{
+	@include home_view();
+}

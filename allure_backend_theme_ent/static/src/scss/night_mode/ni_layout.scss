@@ -1,0 +1,136 @@
+body {
+    &.o_web_client.oe_night_mode:not(.oe_base_menu) , &.o_web_client.oe_base_menu.oe_night_mode {
+        background-color: $night;
+        @include common-layout();
+        @include sync_window_chat_view();
+        @include sync_attendance_view();
+        & > header {
+            @include sync_header_layout();
+        }
+        &.nav-sm {
+            & > header {
+                @include sync_menu_background();
+            }
+        }
+        & > div.o_action_manager {
+            & > div.o_action {
+                background-color: $night-light;
+                &.o_view_controller {
+                    background-color: $night-light;
+                }
+                & > div.o_cp_controller {
+                    & > div.o_control_panel {
+                        @include sync_control_panel_layout();
+                    }
+                }
+                & > .o_controller_with_searchpanel {
+                    .o_search_panel {
+                        @include sync_search_panel_layout();
+                    }
+                    summary {
+                        background-color: $btn-primary;
+                        box-shadow: inset 0px -3px 0px 0px $border;
+                    }
+                    .o_searchview_input_container {
+                        .o_searchview_facet {
+                            background-color: $night;
+                            border-color: $border;
+                            .o_facet_values {
+                                color: $font-color;
+                            }
+                        }
+                    }
+                }
+                div.o_content {
+                    background-color: $btn-secondary;
+                    border-right: 0;
+                    @include website_dashboards_view();
+                    @include web_settings_dashboard_view();
+                    @include sync_import_view();
+                    @include mail_view();
+                    @include gernal_setting_view();
+                    @include sync_kanban_view();
+                    @include common-layout();
+                    @include sync_list_view();
+                    @include sync_graph_layout();
+                    @include sync_activity_layout();
+                    @include sync_pivot_view();
+                    @include sync_calander_view();
+                    @include sync_form_view();
+                }
+            }
+        }
+        &.o_home_menu_background, .o_home_menu_background {
+            background-image: radial-gradient(circle, $night, $btn-secondary);
+        }
+        @include sync_model_view();
+        @include dropdown_view();
+        &.open_customize_theme {
+            .o_technical_modal {
+                .modal-dialog {
+                    .modal-content {
+                        & > .form-group {
+                            border-left: 1px solid $border;
+                        }
+                    }
+                }
+            }
+        }
+        &.ad_mobile {
+            .settings_tab {
+                background-color: $btn-primary !important;
+            }
+            header {
+                .o_main_navbar {
+                    .o_menu_sections {
+                        & > li {
+                            .dropdown-header {
+                                background-color: $btn-primary !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.o_web_client.oe_night_mode:not(.oe_base_menu) {
+        & > header {
+            @include sync_header_vlayout();
+        }
+    }
+
+
+    // Ent [start]
+    .o_home_menu {
+        .o_apps_header {
+            .o_menu_search {
+                .o_menu_search_input {
+                    background-color: transparent !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xs-max) {
+    body {
+        &.o_web_client.oe_night_mode:not(.oe_base_menu) , &.o_web_client.oe_base_menu.oe_night_mode {
+            &.ad_mobile {
+                .settings_tab {
+                    background-color: $btn-primary !important;
+                }
+                header {
+                    .o_main_navbar {
+                        .o_menu_sections {
+                            & > li {
+                                .dropdown-header {
+                                    background-color: $btn-primary !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

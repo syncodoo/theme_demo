@@ -1,0 +1,498 @@
+@mixin common-layout() {
+    h1, h2, h3, h4, h5, h6 {
+        color: $font-color;
+    }
+    .o_action_manager .o_action.o_view_controller .custom-radio .o_radio_input + label:before, &.modal-open .modal-dialog .modal-content .custom-radio .o_radio_input + label:before, .modal-dialog .modal-content .custom-radio .o_radio_input + label:before {
+        border: 2px solid $font-color;
+    }
+    &.open_mobile_menu > header .o_main_navbar:not(.oe_favorite_view) > .oe_menu_layout > ul.o_menu_systray > li .o_mail_systray_dropdown .o_mail_mobile_tabs {
+        box-shadow: none;
+        background-color: $night-light;
+        .o_mail_mobile_tab {
+            color: $font-color;
+            &.active {
+                background: unset;
+                border-top: 2px solid $btn-primary;
+                & > * {
+                    color: $font-color !important;
+                }
+            }
+        }
+    }
+    .modal-content .o_cusomize_theme .o_right_panel input.form-control {
+        color: $font-color;
+    }
+    .btn-primary {
+        background-color: $btn-primary;
+        color: $font-color;
+        border: 0;
+
+        &:hover, &:active, &:focus {
+            background-color: $btn-secondary !important;
+            color: $font-color !important;
+        }
+    }
+    .btn-secondary {
+        background-color: $btn-secondary;
+        color: $font-color;
+        border: 0;
+
+        &:hover, &:active, &:focus {
+            background-color: $btn-primary !important;
+            color: $font-color !important;
+        }
+    }
+    .btn-link, a {
+        color: $btn-primary;
+
+        &.fa-star-o, &.fa-star {
+            color: gold;
+        }
+    }
+    a.btn-info, pre {
+        color: $font-color;
+    }
+    input {
+        border: none;
+        background-color: $night !important;
+        color: $font-color;
+
+        &.o_required_modifier {
+            border-bottom: 1px solid $btn-primary;
+        }
+
+        &:hover, &:active, &:focus {
+            box-shadow: none;
+            background-color: $night;
+        }
+
+        &::placeholder {
+            color: $font-color;
+        }
+    }
+    .oe_module_name > span {
+        color: $font-color;
+    }
+    .custom-checkbox {
+        .custom-control-label {
+            &:before {
+                border: 2px solid $checkbox !important;
+                border-radius: 0;
+            }
+        }
+
+        .custom-control-input:disabled:checked ~ .custom-control-label:before {
+            background-color: $font-color;
+            opacity: 0.6;
+        }
+    }
+    .o_field_radio {
+        .custom-radio {
+            .custom-control-label {
+                &:before {
+                    outline: none;
+                }
+            }
+        }
+    }
+    div.o_boolean_toggle.custom-control.custom-checkbox > input.custom-control-input:checked + label.custom-control-label:before {
+        background-color: $btn-primary !important;
+    }
+    .o_boolean_toggle {
+        .custom-control-label {
+            &:before {
+                border-radius: 16px;
+            }
+        }
+    }
+    .dropdown-menu:not(.bootstrap-datetimepicker-widget) {
+        background-color: $night;
+        color: $font-color;
+        border-color: $border;
+
+        .fa {
+            color: $font-color;
+        }
+
+        a, li, .dropdown-item {
+            color: $font-color;
+
+            &:hover, &.active, &.o_open_menu {
+                background-color: $btn-primary;
+            }
+        }
+
+        input, select {
+            border: none;
+            background-color: $btn-secondary;
+            color: $font-color;
+
+            &:hover, &:active, &:focus {
+                box-shadow: none;
+            }
+
+            &::placeholder {
+                color: $font-color;
+            }
+        }
+
+        .custom-checkbox {
+            .custom-control-label {
+                color: $font-color;
+
+                &:before {
+                    outline: 1px solid $checkbox;
+                }
+            }
+        }
+
+        .dropdown-divider {
+            border-top-color: $border;
+        }
+
+        label {
+            color: $font-color;
+        }
+    }
+    .o_progressbar {
+        .o_progress {
+            background-color: $night-light;
+            border: 0;
+
+            .o_progressbar_complete {
+                background-color: $btn-primary;
+            }
+        }
+    }
+    .o_loading {
+        background-color: $btn-primary;
+    }
+    .o_list_view .text-danger, .o_list_view .oe_import .oe_import_error_report .oe_import_report.text-error, .oe_import .oe_import_error_report .o_list_view .oe_import_report.text-error {
+        color: #ff394b !important;
+    }
+    .o_onboarding.o_onboarding_violet, .o_onboarding.o_onboarding_violet .o_onboarding_wrap, .o_onboarding.o_onboarding_blue .o_onboarding_wrap {
+        background-color: rgba(33, 33, 33, 0.7);
+        box-shadow: inset 0 -7px 20px -5px rgba(0, 0, 0, 0.7);
+        background-image: linear-gradient(to bottom, rgba(33, 33, 33, 0.3), #3b4855);
+    }
+    .o_onboarding.o_onboarding_violet, .o_onboarding.o_onboarding_violet .o_onboarding_step_title, .o_onboarding.o_onboarding_violet .o_onboarding_step_action, .o_onboarding.o_onboarding_violet a.o_onboarding_all_done, .o_onboarding.o_onboarding_violet .o_onboarding_all_done > .fa, .o_onboarding.o_onboarding_violet .o_onboarding_btn_close {
+        color: $font-color !important;
+    }
+    .badge-primary {
+        background-color: $btn-primary;
+        color: $font-color;
+        border-color: $btn-primary;
+    }
+    .note-editor .note-editing-area .note-editable {
+        background-color: $night;
+    }
+    .o_action.o_view_controller > .o_content .o_form_view .oe_form_field .note-editor .note-toolbar .btn-group button {
+        color: $font-color;
+    }
+    .o_view_nocontent {
+        .o_nocontent_help {
+            color: $font-color;
+        }
+        .o_view_nocontent_empty_folder {
+            &:before {
+                color: $font-color;
+            }
+        }
+    }
+    #mb-signout.message-box.animated {
+        .mb-container {
+            background-color: $night;
+            .mb-middle {
+                .mb-footer {
+                    .oe_cu_logout_yes {
+                        background-color: $btn-primary;
+                        border: 0;
+                        color: $font-color;
+                        &:hover {
+                            background-color: $btn-secondary;
+                        }
+                    }
+                    .mb-control-close {
+                        background-color: $btn-secondary;
+                        border: 0;
+                        color: $font-color;
+                        &:hover {
+                            background-color: $btn-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin dropdown_view() {
+    .ui-autocomplete {
+        background-color: $night;
+
+        .ui-menu-item {
+            a {
+                color: $font-color;
+                &.ui-state-active {
+                    background-color: $btn-primary;
+                    color: $font-color;
+                }
+            }
+
+            &.ui-state-focus {
+                background-color: $btn-primary;
+                color: $font-color;
+
+                a {
+                    color: $font-color !important;
+                }
+            }
+
+            &.o_m2o_dropdown_option {
+                a {
+                    color: $btn-primary;
+                    &.ui-state-active {
+                        background-color: $btn-primary;
+                        color: $font-color;
+                    }
+                }
+            }
+        }
+    }
+    .bootstrap-datetimepicker-widget {
+        background-color: $night;
+        border-color: $border;
+        color: $font-color;
+
+        .list-unstyled {
+            .picker-switch, .datepicker-days, .datepicker-months, .datepicker-years, .datepicker-decades, .timepicker-picker {
+                table {
+                    thead {
+                        color: $font-color;
+                        background-color: $btn-primary;
+
+                        tr:last-child {
+                            color: $font-color;
+                            background-color: $night-light;
+                        }
+
+                        tr:first-child {
+                            th:hover {
+                                color: $font-color;
+                                background-color: $night-light;
+                            }
+                        }
+                    }
+
+                    td, th {
+                        border-color: $border;
+                        color: $font-color;
+
+                        &.day {
+                            &:hover {
+                                background: $btn-secondary;
+                            }
+
+                            &.today {
+                                &:before {
+                                    border-bottom-color: $btn-primary;
+                                }
+                            }
+                        }
+
+                        span {
+                            &:hover, &.active {
+                                background-color: $btn-primary;
+                                color: $font-color;
+                            }
+                        }
+                    }
+
+                    tbody {
+                        & > tr {
+                            & > td {
+                                span {
+                                    color: $font-color !important;
+                                }
+                            }
+                        }
+                        a {
+                            .fa-clock-o, .fa-times, .fa-calendar, .fa-chevron-up, .fa-chevron-down {
+                                color: $btn-primary;
+
+                                &:hover {
+                                    background-color: $night-light;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .table-sm > tbody > tr > td.active, .table-sm > tbody > tr > td .active {
+                    background-color: $btn-primary;
+                }
+            }
+            .table-condensed {
+                .fa-check {
+                    color: $btn-primary;
+                }
+            }
+        }
+
+        .timepicker {
+            .timepicker-picker, .timepicker-hours, .timepicker-minutes, .timepicker-seconds {
+                tbody {
+                    tr {
+                        td {
+                            &.minute, &.hour, &.second {
+                                color: $font-color;
+
+                                &:hover {
+                                    background: $btn-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .oe_import_selector, .select2-drop {
+        background-color: $night;
+        color: $font-color;
+
+        .select2-result-sub, .select2-results {
+            li {
+                color: $font-color;
+
+                &.select2-highlighted {
+                    background-color: $btn-primary;
+                }
+            }
+        }
+
+        .select2-search {
+            input {
+                background: url('/web/static/lib/select2/select2.png') no-repeat 100% -22px, -webkit-gradient(linear, left bottom, left top, color-stop(1, $night-light), color-stop(1, $night-light));
+            }
+        }
+    }
+    .o_field_selector.o_edit_mode {
+        & > .o_field_selector_popover {
+            .o_field_selector_popover_header {
+                background-color: $btn-primary;
+
+                &:before {
+                    border-bottom-color: $btn-primary;
+                }
+            }
+
+            .o_field_selector_popover_body {
+                ul.o_field_selector_page {
+                    li.o_field_selector_item {
+                        background-color: $btn-secondary;
+                        color: $font-color;
+                        border-color: $border;
+
+                        &.active {
+                            background-color: $btn-secondary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .tooltip {
+        .tooltip-inner {
+            box-shadow: 0px 0px 1px 1px $border;
+            color: $font-color;
+            background-color: $night;
+        }
+
+        .oe_tooltip_string {
+            background-color: $btn-primary;
+            color: $font-color;
+        }
+
+        &.bs-tooltip-auto[x-placement^="top"] .arrow:before {
+            border-top-color: $night !important;
+        }
+
+        &.bs-tooltip-auto[x-placement^="right"] .arrow:before {
+            border-right-color: $night !important;
+        }
+
+        &.bs-tooltip-auto[x-placement^="left"] .arrow:before {
+            border-left-color: $night !important;
+        }
+
+        &.bs-tooltip-auto[x-placement^="bottom"] .arrow:before {
+            border-bottom-color: $night !important;
+        }
+    }
+    .popover {
+        .popover-header, .card-header {
+            background-color: $night !important;
+            color: $font-color !important;
+            border-bottom: 0;
+        }
+        .popover-body, .o_cw_body, .o_cw_body .list-group-item {
+            background-color: $btn-secondary;
+            color: $font-color;
+        }
+    }
+    // Multi Calender
+    .daterangepicker {
+        background-color: $btn-secondary;
+        color: $font-color;
+        .drp-calendar {
+            .calendar-table {
+                background-color: $btn-secondary;
+                border: 0;
+                table {
+                    thead {
+                        & > tr:first-child {
+                            background-color : $night;
+                            color: $font-color;
+                        }
+                        & > tr:not(:first-child) {
+                            background-color: $night-light;
+                            color: $font-color;
+                        }
+                        .prev, .next {
+                            span {
+                                border-color: $font-color;
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            td {
+                                color: $font-color;
+                                &.off {
+                                    background-color: $night;
+                                    color: $font-color;
+                                    border-radius: 0;
+                                }
+                                &:hover , &.in-range:not(.active){
+                                    background-color: $night-light;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .calendar-time select {
+                color: $font-color;
+                background-color: $night;
+            }
+        }
+        .drp-buttons {
+            .btn-default {
+                background-color: $night-light;
+                color: $font-color;
+                border: 0;
+            }
+        }
+    }
+}

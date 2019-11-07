@@ -1,0 +1,29 @@
+@mixin search_panel() {
+    .o_search_panel {
+        padding: 8px;
+        .o_search_panel_section {
+            .o_search_panel_section_icon {
+                color: $brand-secondary;
+            }
+            .o_search_panel_field {
+                .active {
+                    background-color: $tr-hover;
+                    border-left: 5px solid $brand-primary;
+                    &.list-group-item-action {
+                        margin-left: 0px;
+                    }
+                }
+                .list-group-item-action {
+                    margin-top: -2px;
+                    margin-bottom: -2px;
+                    margin-left: 5px;
+                    &:hover {
+                        margin-left: 0;
+                        background-color: $tr-hover;
+                        border-left: 5px solid $brand-primary;
+                    }
+                }
+            }
+        }
+    }
+}

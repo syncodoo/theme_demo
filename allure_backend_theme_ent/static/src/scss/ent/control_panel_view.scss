@@ -1,0 +1,63 @@
+@mixin control_panel_view_ent(){
+	.o_control_panel{
+		.o_cp_searchview{
+			.o_datepickers_searchview{
+				max-height: 20px;
+				top: 18px;
+				.o_update_options{
+					padding: 0px 8px;
+				}
+			}
+			.o_account-progress{
+				height: 100% !important;
+			}
+		}
+		.o_search_options{
+		    width: 50%;
+		    display: block;
+	        text-align: right;
+	        position: absolute;
+	        right: 15px;
+	        z-index: 1;
+	        min-height: initial;
+			.o_account_reports_filter_date, .o_account_reports_filter_date_cmp,
+			.o_account_reports_filter_bool,
+			.o_account_reports_filter_journals,
+			.o_account_reports_filter_analytic,
+			.o_account_reports_filter_account_type,
+			.o_account_reports_filter_partner,
+			.o_account_reports_filter_intrastat_type,
+			.o_account_reports_filter_intrastat_extended,
+			.o_mps_period_filter,
+			.o_mps_columns_filter{
+				.dropdown-menu{
+					border: 1px solid $border;
+					& > li{
+						.badge.badge-pill{
+							border: 1px solid;
+						}
+					}
+				}
+			}
+			.o_mps_columns_filter{
+				& > a{
+					&:before{
+						content: '\f00b';
+						display: inline-block;
+						font: normal normal normal 14px/1 FontAwesome;
+						font-size: 14px;
+						text-rendering: auto;
+						-webkit-font-smoothing: antialiased;
+						-moz-osx-font-smoothing: grayscale;
+					}
+				}
+			}
+			& > .o_dropdown{
+				& > .dropdown-menu{
+					border: 1px solid $border;
+					top: 100% !important;
+				}
+			}
+		}
+	}
+}

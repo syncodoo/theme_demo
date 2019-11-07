@@ -1,0 +1,180 @@
+@mixin calendar-view() {
+    .fc-now-indicator {
+        border-color: $brand-secondary;
+        &.fc-now-indicator-arrow {
+            border-top-color : transparent;
+            border-bottom-color : transparent;
+        }
+    }
+    .o_calendar_container {
+        .o_calendar_view {
+            background: $white;
+            .o_calendar_widget {
+                .fc-view-container {
+                    .fc-view {
+                        table {
+                            .fc-head {
+                                background-color: rgba($button-box, .03);
+                                .fc-head-container {
+                                    padding-bottom: 0;
+                                    color: $Label-value;
+                                }
+                                .fc-widget-header {
+                                    border-bottom-color: $border;
+                                }
+                            }
+                            .fc-body {
+                                .fc-widget-content {
+                                    table {
+                                        tbody {
+                                            tr {
+                                                td {
+                                                    &:not(.fc-time) {
+                                                        border-top-color: $border;
+                                                    }
+                                                    &.fc-today {
+                                                        background-color: $tr-hover;
+                                                        border-left-color: rgba($brand-secondary,0.2);
+                                                        border-right-color: rgba($brand-secondary,0.2);
+                                                    }
+                                                }
+                                                .fc-event-container {
+                                                    .fc-day-grid-event, .fc-time-grid-event {
+                                                        color: $Label-value !important;
+                                                        &:hover {
+                                                            color: $white !important;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .fc-popover {
+                        .fc-body {
+                            .fc-event-container {
+                                .fc-day-grid-event , .fc-time-grid-event {
+                                    color: $Label-value !important;
+                                    &:hover {
+                                        color: $white !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .fc-month-view {
+                    padding-left: 0;
+                    .fc-content-skeleton .fc-today .fc-day-number {
+                        margin: 0;
+                        box-shadow: 0px 0px 4px 0px #8ccdd4;
+                        background-color: $brand-secondary;
+                        border: 1px solid $brand-secondary;
+                        border-radius: 0px 0px 50% 50%;
+                    }
+                }
+                .fc-week {
+                    td {
+                        border-left-color: $border;
+                    }
+                }
+                .o_cw_popover {
+                    &.o_calendar_color_6 {
+                        .card-header {
+                            background-color: transparent;
+                            color: $Label-value;
+                        }
+                        .o_cw_body {
+                            .list-group {
+                                .list-group-item {
+                                    border: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & > .o_calendar_sidebar_container {
+            display: table-cell;
+            vertical-align: top;
+            .o_calendar_sidebar {
+                margin-left: 0px;
+                .o_calendar_mini {
+                    .ui-datepicker-inline {
+                        padding: 2px;
+                        border: 0;
+                        font-size: $font-size-1;
+                        .ui-datepicker-header {
+                            background-color: $white;
+                            border: 0;
+                            border-bottom: 1px solid $border;
+                            color: $Label-value;
+                            .ui-datepicker-title {
+                                flex: 1 1 auto;
+                            }
+                            .ui-datepicker-prev, .ui-datepicker-next {
+                                span {
+                                    font-size: 0;
+                                    &:before {
+                                        color: $Label-value;
+                                    }
+                                }
+                            }
+                        }
+                        .ui-datepicker-calendar {
+                            thead {
+                                border: 2px solid transparent;
+                                & > tr {
+                                    & > th {
+                                        color: $Label-value;
+                                        background-color: $white;
+                                    }
+                                }
+                            }
+                            tbody {
+                                & > tr {
+                                    & > td {
+                                        padding: 0px 5px;
+                                        & > a {
+                                            background-color: $white;
+                                            color: $Label-value;
+                                            animation: none;
+                                            width: 100%;
+                                            text-align: center;
+                                            padding: .2em;
+                                            border-radius: 0;
+                                        }
+                                        &.ui-datepicker-current-day {
+                                            & > a.ui-state-active {
+                                                background-color: $white;
+                                                @include border-animation();
+                                            }
+                                        }
+                                        &.ui-datepicker-week-end:first-child {
+                                            & > a.ui-state-default {
+                                                color: $font-color;
+                                                background-color: $white;
+                                                @include border-animation();
+                                                background: repeating-linear-gradient(to right, $text-danger 0%, $text-danger 100%) left bottom transparent no-repeat;
+                                                background-size: 100% 1px;
+                                                background-position: center bottom;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .o_selected_range.o_color:not(.ui-datepicker-unselectable) {
+                                background-color: transparent;
+                                animation: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

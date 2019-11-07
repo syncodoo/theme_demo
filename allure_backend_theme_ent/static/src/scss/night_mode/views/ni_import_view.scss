@@ -1,0 +1,60 @@
+@mixin sync_import_view() {
+    .oe_import {
+        color: $font-color;
+
+        .oe_import_with_file {
+            .table-responsive {
+                thead {
+                    tr {
+                        &.oe_import_grid-header, &.oe_import_fields {
+                            td {
+                                background-color: $night;
+                                color: $font-color;
+                                border-color: $border;
+                            }
+
+                            .oe_import_match_field {
+                                .select2-choice {
+                                    background-color: $btn-secondary;
+                                    background-image: none;
+                                    color: $font-color;
+                                    border-color: $border;
+                                    box-shadow: none;
+
+                                    .select2-arrow {
+                                        background: $night-light;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        background-color: $btn-secondary;
+
+                        td {
+                            color: $font-color;
+                            border-color: $border;
+                        }
+                    }
+                }
+                table.bg-white {
+                    background-color: $btn-secondary !important;
+                }
+            }
+        }
+
+        .oe_import_box {
+            background-color: $night-light;
+            color: $font-color;
+            .oe_import_toggle {
+                color: $font-color;
+                &:before {
+                    color: $font-color;
+                }
+            }
+        }
+    }
+}

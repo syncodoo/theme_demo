@@ -1,0 +1,27 @@
+@mixin ent-barcode-view(){
+	&.o_barcode_client_action{
+		.o_barcode_header{
+			background-color: $brand-secondary !important;
+			flex: 0 0 40px;
+		}
+		.o_barcode_message{
+			background-color: $brand-primary !important;
+		}
+		.o_barcode_control > .btn.btn-secondary{
+			&:hover{
+				color: $white;
+			}
+		}
+	}
+	.o_event_barcode_bg{
+		.o_event_barcode_detail{
+			.o_event_date, .o_event_social{
+				background-color: $brand-secondary !important;
+				border-radius: 0;
+			}
+		}
+		.o_event_barcode_main{
+			border-radius: 0;
+		}
+	}
+}

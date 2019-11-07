@@ -1,0 +1,192 @@
+@mixin mail-common-layout() {
+    .o_mail_thread {
+        .o_mail_no_content {
+            color: $font-color;
+        }
+
+        .o_mail_thread_content {
+            .o_thread_date_separator {
+                border-color: $border;
+
+                .o_thread_date {
+                    background-color: $night-light;
+                    color: $font-color;
+                }
+            }
+
+            .o_thread_message {
+                background-color: $night-light;
+                border-bottom: 1px solid $border;
+
+                .o_thread_message_core {
+                    .o_thread_message_content {
+                        color: $font-color;
+                        overflow: auto;
+                    }
+                    strong {
+                        color: $font-color;
+                    }
+                }
+
+                .o_mail_info {
+                    .o_thread_icons {
+                        .o_thread_icon {
+                            color: $font-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .o_thread_composer {
+        border: 0;
+        background: $night;
+
+        .o_composer {
+            background-color: $btn-secondary;
+            border: 0;
+
+            textarea {
+                background-color: $btn-secondary;
+                color: $font-color;
+
+                &::placeholder {
+                    color: $font-color;
+                }
+            }
+
+            .o_chatter_composer_tools {
+                border-left-color: $border;
+
+                button {
+                    background-color: $night-light;
+                    color: $font-color;
+                }
+            }
+        }
+
+        .o_mail_emoji_container {
+            border: 0;
+            background-color: $btn-secondary;
+
+            .btn-link {
+                color: $font-color;
+            }
+        }
+
+        .o_composer_attachments_list {
+            .o_attachments {
+                margin-top: 5px;
+                .o_attachment {
+                    background-color: $btn-secondary;
+                    color: $font-color;
+
+                    .o_attachment_delete {
+                        &:hover, &:active, &:focus {
+                            background-color: $btn-primary;
+                        }
+                    }
+                }
+            }
+        }
+
+        .o_composer_container {
+            .o_composer_subject {
+                background-color: $night;
+                border-color: $border;
+            }
+            .o_mail_emoji_container {
+                background-color: $night;
+                color: $font-color;
+            }
+        }
+        .o_composer_send {
+            margin-left: 5px;
+            button.o_composer_button_send {
+                &:before {
+                    color: $font-color;
+                }
+            }
+        }
+    }
+}
+
+@mixin mail_view() {
+    .o_mail_discuss {
+        .o_mail_discuss_content {
+            background-color: $btn-secondary;
+            @include common-layout();
+            @include mail-common-layout();
+        }
+
+        .o_mail_discuss_sidebar {
+            background-color: $btn-secondary;
+            border-right: 1px solid $border;
+
+            .o_mail_discuss_item {
+
+                &.o_active, &:hover {
+                    background-color: $night;
+                    box-shadow: inset 3px 0 0 $btn-primary;
+                }
+                .o_thread_name {
+                    color: $font-color;
+                }
+            }
+
+            & > hr {
+                border-color: $border;
+            }
+
+            .o_mail_sidebar_title {
+                h4, .o_add {
+                    color: $font-color;
+                }
+            }
+
+            .o_mail_add_thread > input {
+                background-color: $night-light;
+                border: 0;
+                color: $font-color;
+            }
+        }
+
+        .o_mail_discuss_mobile_mailboxes_buttons {
+            button {
+                background-color: $btn-primary !important;
+                border-color: $btn-primary;
+            }
+        }
+        .o_mail_mobile_tabs {
+            background-color: $night;
+            .o_mail_mobile_tab {
+                color: $font-color !important;
+                &.active {
+                    border-top: 2px solid $font-color;
+                    background: unset !important;
+                    & > * {
+                        color: $font-color !important;
+                    }
+                }
+            }
+        }
+        .o_mail_discuss_tab_pane {
+            .o_mail_preview  {
+                background-color: $night;
+                color: $font-color;
+                border: 0;
+                margin-top: 5px;
+                .o_preview_title {
+                    .o_last_message_date {
+                        color: $font-color;
+                    }
+                }
+                .o_preview_info {
+                    .o_last_message_preview {
+                        color: $font-color;
+                    }
+                }
+            }
+        }
+    }
+}

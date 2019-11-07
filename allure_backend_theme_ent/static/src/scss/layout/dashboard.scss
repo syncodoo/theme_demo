@@ -1,0 +1,137 @@
+.o_web_client{
+    .o_action_manager{
+        .o_view_controller.o_action {
+            .o_content{
+                .o_web_settings_dashboard {
+                    position: fixed;
+                    width: auto;
+                    right: 0;
+                    left: 50px;
+                    top: 40px;
+                    bottom: 0px;
+                    height: auto;
+                    overflow: auto;
+                    border-top: 1px solid $border;
+                    border-bottom: 1px solid $border;
+                    @include slide-animation();
+                    .form-row{
+                        .o_web_settings_dashboard_col{
+                            padding: 0;
+                            margin: 0;
+                            & > div{
+                                min-height: 177px;
+                                padding: 10px;
+                                justify-content: center;
+                                align-items: center;
+                                display: flex;
+                                flex-direction: column;
+                                border: 0;
+                                border-radius: 0;
+                                & > .o_setup_company{
+                                    width: 100%;
+                                    min-height: 155px;
+                                    display: flex;
+                                    flex-flow: column;
+                                    justify-content: center;
+                                }
+                            }
+                            .o_web_settings_dashboard_customize_theme{
+                                .o_setup_theme{
+                                    border-radius: 6px 0px 0px 6px;
+                                    i.fa-cog{
+                                        color: $white !important;
+                                    }
+                                }
+                            }
+                            .o_web_settings_dashboard_invitations{
+                                border: 0;
+                                padding: 0px;
+                                & > .text-center, & > .o_web_settings_dashboard_invitation_form, & > .o_web_settings_dashboard_pending_users{
+                                    width: 100%;
+                                    text-align: center;
+                                    min-height: 177px;
+                                    padding: 10px;
+                                    display: flex;
+                                    flex-flow: column;
+                                    justify-content: center;
+                                }
+                                & > .text-center{
+                                }
+                                & > .o_web_settings_dashboard_invitation_form {
+                                    background-color: $dashboard-dark-color;
+                                    input{
+                                        background-color: $dashboard-dark-color;
+                                    }
+                                    .o_web_settings_dashboard_invite{
+                                        background-color: transparent;
+                                        color: $brand-secondary;
+                                        border: 1px solid $border;
+                                    }
+                                }
+                            }
+                            &:nth-child(even){
+                                & > div:nth-child(even){
+                                    background-color: $dashboard-dark-color;
+                                }
+                                & > div:nth-child(odd){
+                                    background-color: $dashboard-light-color;
+                                }
+                            }
+                            &:nth-child(odd){
+                                & > div:nth-child(even){
+                                    background-color: $dashboard-color;
+                                }
+                                & > div:nth-child(odd){
+                                    background-color: $dashboard-dark-color;
+                                }
+                            }
+                        }
+                        .o_web_settings_dashboard_translations{
+                            .lds-earth circle{
+                                fill: $brand-primary;
+                            }
+                        }
+                        .o_web_settings_dashboard_customize_theme, .o_web_settings_dashboard_company, .o_web_settings_dashboard_pending_users, .o_web_settings_dashboard_share{
+                            .fa{
+                                color: $brand-primary !important;
+                            }
+                            .o_web_settings_dashboard_user, .o_web_settings_dashboard_header, .user-heading > h2{
+                                color: $brand-primary;
+                                border-color: $brand-primary;
+                            }
+                        }
+                    }
+                }
+                .o_settings_control_panel{
+                    padding-left: 42px;
+                    padding-top: 6px;
+                    border: 0;
+                    min-height: 40px;
+                }
+            }
+        }
+    }
+    &.ad_full_view {
+        .o_action_manager{
+            .o_view_controller.o_action{
+                .o_content{
+                    .o_web_settings_dashboard {
+                        left: 0;
+                        @include slide-animation();
+                    }
+                }
+            }
+        }
+    }
+    &.ad_mobile {
+        .o_action_manager{
+            .o_view_controller.o_action {
+                .o_content{
+                    .o_web_settings_dashboard {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

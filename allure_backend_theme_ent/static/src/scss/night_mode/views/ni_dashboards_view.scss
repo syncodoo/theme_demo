@@ -1,0 +1,66 @@
+@mixin website_dashboards_view() {
+    .o_dashboards {
+        @include common-layout();
+
+        .o_website_dashboard {
+            background-color: $btn-secondary;
+
+            .o_website_dashboard_content {
+                .row {
+                    .o_box {
+                        background-color: $btn-secondary;
+                        color: $font-color;
+
+                        & > h2 {
+                            color: $btn-primary;
+                        }
+                    }
+
+                    .o_demo_background {
+                        .o_layer {
+                            background-color: rgba($night, .7)
+                        }
+                    }
+
+                    .o_demo_message {
+                        color: $font-color;
+                    }
+                }
+            }
+        }
+    }
+    .o_view_nocontent {
+        .o_view_nocontent_smiling_face {
+            color: $font-color;
+            &:before {
+                color: $font-color;
+            }
+        }
+
+        .o_nocontent_help {
+            color: $font-color;
+        }
+    }
+}
+
+@mixin web_settings_dashboard_view() {
+    .o_web_settings_dashboard {
+        background: $night-light;
+
+        .o_web_settings_dashboard_col {
+            & > div {
+                background-color: $btn-secondary;
+                color: $font-color;
+                @include common-layout();
+
+                a {
+                    color: $btn-primary;
+                }
+
+                hr {
+                    border-color: $border;
+                }
+            }
+        }
+    }
+}

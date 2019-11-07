@@ -1,0 +1,162 @@
+@mixin dial-layout() {
+	padding: 5px;
+	.o_row {
+		justify-content: center;
+		align-items: center;
+		.o_dial_keypad_button_small {
+			flex: 1 1 auto;
+			a {
+				i {
+				    width: 100%;
+				}
+			}
+		}
+	}
+	.o_phonecall_in_call {
+		display: flex !important;
+	}
+}
+@mixin ent-dial-view(){
+	.o_dial{
+		left: 65px;
+		z-index: 10;
+		@include slide-animation();
+		.o_dial_fold{
+			border: 1px solid $border;
+			background-color: $brand-primary;
+			.o_dial_window_close{
+				&:hover{
+					background-color: $brand-primary;
+				}
+			}
+		}
+		.o_dial_panel{
+			.o_dial_searchbar{
+				.o_dial_search_input{
+					@include border-animation();
+				}
+				.fa-search{
+					top: calc(50% - 10px);
+				}
+			}
+			.o_notebook{
+				.o_dial_tabs{
+					border: 0;
+					.nav-item{
+						& > a{
+							border: 0;
+							color: $Label;
+							&.active{
+								@include border-animation();
+								border: 0;
+							}
+						}
+					}
+				}
+			}
+			.tab-content{
+				height: 100%;
+				.tab-pane{
+					.o_dial_phonecalls{
+						.o_dial_phonecall {
+							border-bottom: 1px solid $border;
+							table{
+								.o_form_group_row{
+									.o_form_group_cell{
+										max-width: 270px;
+										.o_dial_phonecall_partner{
+											.o_dial_status_span{
+												top: 0px;
+												right: -15px;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					.o_dial_keypad_button_container{
+						.o_dial_keypad_button_small{
+							.feature{
+								margin-bottom: 0px;
+								vertical-align: baseline;
+							}
+						}
+					}
+					&.o_dial_contacts {
+						.in_call {
+							.details_in_call {
+								& + .o_dial_keypad_button_container {
+									@include dial-layout();
+								}
+							}
+						}
+						.o_dial_keypad_button_container {
+							padding: 5px;
+							.o_row {
+								.o_dial_keypad_button_small {
+									a {
+										& > i{
+											width: 100%;
+										}
+									}
+								}
+							}
+						}
+					}
+					&.o_dial_next_activities {
+						.o_dial_keypad_button_container{
+							@include dial-layout();
+							.o_phonecall_in_call{
+								display: none !important;
+							}
+						}
+					}
+					&.o_dial_recent {
+						.o_dial_keypad_button_container{
+							padding: 5px;
+							.o_row {
+								.o_dial_keypad_button_small {
+									a {
+										& > i {
+											width: 100%;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.o_dial_buttons{
+			background-color: transparent;
+			min-height: 45px;
+			border-top: 1px solid $border;
+			.fa{
+				font-size: $font-size-4;
+			}
+		}
+		.o_dial_keypad{
+			.o_dial_keypad_input_div{
+				.o_dial_keypad_input{
+					@include border-animation();
+				}
+				.o_dial_keypad_backspace{
+					top: calc(50% - 10px);
+				}
+			}
+			.o_dial_keypad_buttons{
+				.O_dial_number{
+					color: $brand-primary !important;
+				}
+			}
+		}
+	}
+}
+@mixin ent-dial-view-full(){
+	.o_dial{
+		left: 5px;
+		@include slide-animation();
+	}
+}

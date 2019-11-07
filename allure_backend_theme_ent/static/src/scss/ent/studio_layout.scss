@@ -1,0 +1,92 @@
+@mixin web-studio(){
+    .o_main_navbar {
+        .o_menu_sections {
+            & > li {
+                margin-bottom: 16px;
+                padding: 5px;
+                width: 100%;
+                display: block;
+                text-align: center;
+                & > a.o_web_edit_menu {
+                    padding: 12px;
+                    margin: 0;
+                    text-align: center;
+                    color: $white;
+                    display: inline-block;
+                    width: 100%;
+                    background-color: $brand-secondary;
+
+                    &:hover, &:active {
+                        border: 1px solid $brand-secondary;
+                        color: $brand-secondary;
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+        .o_web_studio_notes, .o_web_studio_leave {
+            height: 0% !important;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+    }
+    .o_web_studio_menu{
+        height: 53px;
+        background-color: $white;
+        margin-left: 65px;
+        @include slide-animation();
+        border-bottom: 1px solid $border;
+        .o_web_studio_breadcrumb{
+            .breadcrumb{
+                margin: 20px 40px;
+                font-size: $font-size-8;
+                .breadcrumb-item{
+                    color: $black;
+                }
+            }
+        }
+        .o_menu_sections{
+            padding-top: 5px;
+            padding-right: 5px;
+            li{
+                border-bottom: 0;
+                font-size: $font-size-1;
+                &:hover, &:active, &:focus{
+                    background-color: transparent;
+                    a{
+                      background-color: transparent;
+                      color: $Label;
+                      border-bottom: 0;
+                    }
+                }
+                a{
+                    font-size: $font-size-1;
+                    color: $Label;
+                    border-bottom: 0;
+                    &.active{
+                        @include border-animation();
+                    }
+                }
+            }
+            .o_web_studio_submenu_icons{
+                .o_web_studio_views_icons{
+                    border-left: 0;
+                }
+            }
+        }
+    }
+    .o_action_manager{
+        .o_view_controller.o_action{
+            .o_content{
+                margin-bottom: 0px;
+            }
+        }
+    }
+    &.ad_full_view{
+        header{
+            .o_web_studio_menu{
+                margin-left: 0;
+            }
+        }
+    }
+}

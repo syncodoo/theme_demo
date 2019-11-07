@@ -1,0 +1,259 @@
+@mixin sync_control_panel_layout() {
+    background-color: $night-light;
+    border-bottom: 0;
+    @include common-layout();
+    ol.breadcrumb {
+        background-color: $night-light;
+
+        .breadcrumb-item {
+            & > a {
+                color: $font-color;
+            }
+
+            &.active {
+                color: $night-hover;
+            }
+            & + .breadcrumb-item {
+                &:before {
+                    color: $font-color;
+                }
+            }
+        }
+    }
+    .o_cp_searchview {
+        .o_searchview {
+            background-color: $btn-secondary;
+            border: 0;
+
+            .o_searchview_facet {
+                border: 0;
+                padding-top: 3px;
+            }
+
+            .o_searchview_input {
+                margin-top: 3px;
+                padding: 5px 0 5px 5px;
+                background-color: $btn-secondary;
+                color: $font-color;
+
+                &::placeholder {
+                    color: $font-color;
+                }
+            }
+
+            .o_toggle_searchview_full {
+                color: $font-color;
+            }
+
+            .o_enable_searchview {
+                background-color: transparent;
+            }
+            .o_mobile_search {
+                background-color: $btn-secondary;
+                .o_mobile_search_header {
+                    background-color: $night-light;
+                }
+                .o_mobile_search_filter {
+                    .o_dropdown {
+                        button {
+                            background-color: $night-light;
+                            color: $font-color;
+                        }
+                        .dropdown-menu {
+                            border-color: $border;
+                            .o_menu_item a{
+                                color: $font-color;
+                                &:before {
+                                    color: $font-color;
+                                    border-color: $font-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .o_searchview_more {
+                color: $night-hover;
+                top: 7px;
+                background-image: url("/allure_backend_theme_ent/static/src/img/find_night_mode.svg") !important;
+            }
+
+            .o-selection-focus {
+                background-color: $btn-primary;
+            }
+
+            .o_searchview_input_container {
+                .o_searchview_facet {
+                    .o_searchview_facet_label {
+                        color: $font-color;
+                        background-color: $btn-primary;
+                        border: 0;
+                    }
+
+                    .o_facet_values {
+                        background-color: $night-light;
+                        color: $font-color;
+                    }
+
+                    .o_facet_remove {
+                        color: $font-color;
+                    }
+                }
+            }
+        }
+    }
+    .o_cp_switch_buttons {
+        .btn.btn-link.btn-sm {
+            background-color: transparent;
+            color: $font-color;
+            line-height: 0;
+        }
+        & > .active {
+            background-color: $btn-primary;
+        }
+        .dropdown-menu {
+            .oe_view_btn {
+                button {
+                    background-color: unset;
+                    &.active , &:hover {
+                        background: unset;
+                        box-shadow: 0px 2px 0px 0px #5bade9;
+                    }
+
+                }
+            }
+        }
+    }
+    .ad_bottom_panel {
+        background-color: $night-light;
+        border-top: 0;
+        border-color: $border;
+        .o_cp_left, .o_cp_right {
+            .o_cp_buttons{
+                background-color: $night-light;
+                border-color: $border;
+                .btn-primary {
+                    background-color: $btn-primary;
+                    color: $font-color;
+                    border: 0;
+
+                    &:hover, &:active, &:focus {
+                        background-color: $btn-secondary;
+                    }
+                }
+                .btn-link {
+                    color: $btn-primary;
+                }
+
+                .btn-default {
+                    background-color: $btn-secondary;
+                    color: $btn-primary;
+                    border: 0;
+
+                    &:hover, &:active, &:focus {
+                        background-color: $btn-primary;
+                        color: $font-color;
+                    }
+                }
+
+                .btn-secondary {
+                    background-color: $btn-secondary;
+                    color: $font-color;
+                    border: 0;
+
+                    &:hover, &:active, &:focus {
+                        background-color: $btn-primary;
+                    }
+                }
+                .dropdown-menu {
+                    a.dropdown-item {
+                        &:before {
+                            border-color: $font-color;
+                            color: $font-color;
+                        }
+                    }
+                }
+            }
+
+
+            .o_cp_pager {
+                color: $font-color;
+                .o_pager {
+                    .btn-group {
+                        button {
+                            color: $font-color;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    .o_search_options {
+        .ad_has_options {
+            background-color: $night-light;
+            .o_dropdown {
+                .o_dropdown_toggler_btn {
+                    background-color: $night-light;
+                }
+                &.ad_active {
+                    .o_dropdown_toggler_btn {
+                        background-color: $btn-primary;
+                    }
+                }
+                .o_menu_item, .o_menu_item .list-unstyled {
+                    & > .dropdown-item, .o_item_option .dropdown-item {
+                        padding: 6px 30px;
+                        &:before {
+                            border: 2px solid $font-color;
+                            left: 5px;
+                            color: $font-color;
+                        }
+                        &:focus {
+                            background-color: $btn-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .o_cp_sidebar {
+        .btn-group {
+            background-color: $night-light;
+            border-color: $border;
+            button {
+                color: $font-color;
+                background-color: $night-light;
+                &:hover {
+                    background-color: $btn-primary;
+                    color: $font-color;
+                }
+            }
+        }
+    }
+    .o_sidebar_drw {
+        background-color: $btn-primary;
+        border-color: $btn-primary;
+    }
+}
+
+@mixin sync_search_panel_layout() {
+    background-color: $btn-secondary;
+    border-right: 0;
+    color: $font-color;
+    .list-group-item {
+        background-color: $night;
+        padding: 0;
+        .list-group-item-action {
+            margin-bottom: 8px;
+            border-radius: 0;
+            &.active , &:hover {
+                border-left: 5px solid $btn-primary;
+            }
+            .o_search_panel_label_title {
+                color: $font-color;
+            }
+        }
+    }
+}

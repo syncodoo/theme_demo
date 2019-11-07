@@ -1,0 +1,40 @@
+@mixin ent-grid-view(){
+	.o_view_grid{
+		padding: 10px;
+		border-right: 10px solid transparent;
+		.table{
+			border: 1px solid $border;
+			& > thead{
+				background-color: $tr-hover;
+				color: $Label;
+				tr{
+					th.o_grid_total{
+						background-color: $brand-secondary;
+					}
+					.o_grid_current{
+						background-color: $tr-hover;
+					}
+				}
+			}
+			& > tbody{
+				&  > tr{
+					.o_grid_total{
+						background-color: $brand-secondary;		
+					}
+					&:first-child{
+						background-color: $tr-hover;
+					}
+					.o_grid_current{
+						background-color: $tr-hover;
+					}
+				}
+			}
+			tbody + tbody{
+				border-top: 2px solid $border;
+			}
+			& > tfoot{
+				background-color: $brand-secondary;
+			}
+		}
+	}
+}

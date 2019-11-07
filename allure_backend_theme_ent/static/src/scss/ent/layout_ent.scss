@@ -1,0 +1,181 @@
+body.o_web_client{
+    .text-primary{
+        color: $brand-secondary !important;
+    }
+    .o_action_manager{
+        & > .o_action{
+            @include control_panel_view_ent();
+            .o_content{
+                z-index: 1;
+                @include ent-cohort-view();
+                @include ent-dashboard-view();
+                @include ent-kanban-view();
+                @include end-document-view();
+                @include ent-gannt-view();
+                @include ent-grid-view();
+                @include ent-form-view();
+                /*@include account-dashboard();*/
+                @include ent-barcode-view();
+                @include referral_view_ent();
+                @include ent-map-view();
+            }
+        }
+    }
+    @include ent-dial-view();
+    &.ad_full_view{
+        @include ent-dial-view-full();
+    }
+    &.o_home_menu_background{
+        background-image: radial-gradient(circle, darken($brand-secondary, 20%), $black);
+        .o_main_navbar{
+            background-color: $brand-primary;
+        }
+        input[name="barcode"]{
+            display: none;
+        }
+        .o_home_menu{
+            display: block;
+            margin-left: 50px;
+            //@include slide-animation();
+            .o_menu_search{
+                width: 40%;
+            }
+            .database_expiration_panel, .o_menu_search, .o_home_menu_scrollable{
+                max-width: 70%;
+            }
+            .o_home_menu_scrollable{
+                flex: 1 1 auto;
+                overflow-x: hidden;
+                overflow-y: auto;
+                width: 100%;
+                margin: auto;
+                margin-bottom: 18px;
+                .o_apps{
+                    &.oe_view_delete{
+                        position: relative;
+                        &:before{
+                            content: "\f1f8";
+                            display: flex;
+                            position: absolute;
+                            justify-content: center;
+                            align-items: center;
+                            border: 3px dotted $border;
+                            color: $white;
+                            background-color: rgba(255,8,0,0.3);
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            z-index: 22;
+                            @include fa-fa-font(60px);
+                        }
+                    }
+                    .o_app{
+                        width: 16%;
+                        transition: none;
+                        border-radius: 0;
+                        .o_app_icon{
+                            transform: unset;
+                            box-shadow: none;
+                        }
+                        &:hover {
+                            background-color: $submenu-hover;
+                        }
+                        &.ui-draggable-dragging {
+                            z-index: 9;
+                            position: fixed !important;
+                            .o_app_icon {
+                                margin: 5px auto;
+                                width: 30px;
+                                height: 30px;
+                                transition: none;
+                            }
+                            .o_caption {
+                                font-size: $font-size-3;
+                            }
+                            &:hover{
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+            .database_expiration_panel{
+                margin: auto;
+                margin-bottom: 5px;
+            }
+            .o_bar_hidden{
+                opacity: 1;
+            }
+            .o_apps_header{
+                display: flex;
+                flex-direction: row;
+                width: 80%;
+                justify-content: center;
+                align-items: center;
+                margin: 15px auto;
+                .o_menu_search{
+                    display: flex;
+                    justify-content: center;
+                    flex: 0 0 auto;
+                    width: 90%;
+                    max-width: none;
+                    height: 34px;
+                }
+            }
+        }
+        &.ad_full_view{
+            .o_home_menu{
+                margin-left: 0px;
+                @include slide-animation();
+            }
+        }
+        header{
+            .o_main_navbar{
+                .oe_menu_layout{
+                    #children_toggle{
+                        display: none !important;
+                    }
+                }
+                #av_full_view{
+                    & > .fa{
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    .o_home_menu_background{
+        background-image: radial-gradient(circle, darken($brand-secondary, 20%), $black);
+    }
+    .modal.o_technical_modal{
+        .modal-dialog{
+            .modal-content{
+                .modal-body{
+                    @include domain-node-field();
+                    @include ent-form-view();
+                }
+            }
+        }
+    }
+    &.o_in_studio{
+        @include web-studio();
+    }
+}
+
+.database_expiration_panel {
+    .alert {
+        @include media-breakpoint-up(lg) {
+            margin-top: 0px;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.o_menu_search {
+    @include media-breakpoint-up(lg) {
+        margin-top: 0px;
+        margin: 0;
+    }
+}
+

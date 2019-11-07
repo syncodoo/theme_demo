@@ -1,0 +1,60 @@
+@mixin sync_window_chat_view() {
+    .o_thread_window {
+        background-color: transparent;
+
+        .o_thread_window_header {
+            background-color: $btn-primary;
+            border-bottom-color: $border;
+            a {
+                color: $font-color;
+            }
+        }
+
+        .o_thread_search_input {
+            background-color: $btn-secondary;
+            color: $font-color;
+        }
+
+        .o_mail_thread_content {
+            background-color: $btn-secondary;
+        }
+
+        .o_thread_composer {
+            margin-top: 0;
+
+            .o_composer_container {
+                border-color: $border;
+
+                .o_chatter_composer_tools {
+                    button {
+                        padding: 8px;
+                        color: $font-color !important;
+                    }
+                }
+            }
+        }
+
+        .o_attachments.o_attachments_list {
+            margin-top:0 !important;
+            .o_attachment_wrap {
+                background-color: $night;
+                border: 0;
+            }
+        }
+
+        .o_attachment {
+            width: 50%;
+        }
+
+        .o_mail_thread {
+            background: $btn-secondary !important;
+        }
+        &.dropup {
+            background-color: $btn-primary;
+            border-radius: 0;
+            margin-right: 5px;
+        }
+
+        @include mail-common-layout();
+    }
+}

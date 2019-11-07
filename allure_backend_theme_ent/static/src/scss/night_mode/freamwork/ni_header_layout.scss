@@ -1,0 +1,302 @@
+@mixin sync_header_layout() {
+    .o_main_navbar {
+        background-color: $night;
+        color: $font-color;
+        border-bottom: 1px solid $night;
+
+        &.oe_favorite_view {
+            background-color: $night;
+            & > ul#av_full_view, & > ul.oe_full_button {
+                color: $font-color;
+            }
+            .oe_menu_layout.oe_theme_menu_layout {
+                background-color: $night !important;
+            }
+        }
+
+        .o_menu_apps {
+            .dropdown {
+                .full {
+                    color: $font-color;
+
+                    &:hover, &:active, &:focus {
+                        background-color: $night-hover;
+                    }
+                }
+            }
+        }
+
+        & > .o_menu_brand {
+            &:hover, &:active, &:focus {
+                background-color: $night-hover;
+            }
+        }
+
+        .o_menu_sections, .o_menu_systray {
+            & > li {
+                & > a {
+                    color: $font-color;
+
+                    &:hover, &:active, &:focus {
+                        background-color: $night-hover;
+                    }
+                }
+                &:hover, &:active, &:focus {
+                    background-color: $night-hover;
+                }
+
+                &.show {
+                    .dropdown-toggle {
+                        background-color: $btn-primary;
+                    }
+                }
+
+                .dropdown-header {
+                    background-color: $night;
+                    color: $font-color;
+                }
+                .dropdown-menu {
+                    li {
+                        & > a {
+                            color: $font-color;
+                        }
+                    }
+                }
+            }
+
+            .o_notification_counter {
+                color: $font-color;
+                background-color: $night-hover;
+            }
+        }
+
+        & > .oe_menu_layout {
+            & > .o_menu_systray {
+                & > .o_mail_systray_item {
+                    div.o_mail_systray_dropdown.dropdown-menu {
+                        div.o_mail_systray_dropdown_items {
+                            .o_mail_preview {
+                                background-color: $btn-secondary !important;
+                                color: $font-color;
+                                border-color: $border;
+                                .o_preview_title {
+                                    .o_preview_name, .o_preview_counter, .o_last_message_date {
+                                        color: $font-color;
+                                    }
+                                }
+                                .o_last_message_preview {
+                                    color: $font-color;
+                                }
+
+                                .o_no_activity {
+                                    color: $font-color;
+                                }
+                            }
+                        }
+
+                        .o_mail_systray_dropdown_top {
+                            border-color: $border !important;
+
+                            .btn-link {
+                                &.active, &:hover, &:focus {
+                                    color: $btn-primary;
+                                }
+                            }
+                            button {
+                                color: $font-color;
+                                &.active {
+                                    color: $btn-primary;
+                                }
+                            }
+                        }
+
+                        .o_mail_systray_dropdown_items {
+                            .o_no_activity {
+                                color: $font-color;
+
+                                &:hover, &:active, &:focus {
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .o_menu_brand {
+            &:hover {
+                color: $font-color;
+            }
+        }
+        .oe_full_button {
+            .oe_full {
+                .fa-expand {
+                    color: $font-color;
+                }
+            }
+        }
+    }
+}
+@mixin sync_menu_background() {
+    & > nav.o_main_navbar {
+        #o_menu_apps.o_menu_apps {
+            & > .main_menu {
+                background-image: radial-gradient(circle, $night, $btn-secondary);
+                .o_search_input {
+                    background-color: transparent !important;
+                }
+            }
+        }
+    }
+}
+@mixin sync_header_vlayout() {
+    & > .o_main_navbar {
+        & > *:not(.o_menu_sections):not(#av_full_view):not(.oe_full_button) {
+            background-color: $night !important;
+        }
+        & > .o_toggle_menu {
+            & > li > a {
+                background-color: $night !important;
+            }
+            & > li > #o_menu_systray.o_menu_systray {
+                & > .o_mail_systray_item {
+                    div.o_mail_systray_dropdown.dropdown-menu {
+                        div.o_mail_systray_dropdown_items {
+                            .o_mail_preview {
+                                background-color: $btn-secondary !important;
+                                color: $font-color;
+                                border-color: $border;
+                                .o_preview_title {
+                                    .o_preview_name, .o_preview_counter, .o_last_message_date {
+                                        color: $font-color;
+                                    }
+                                }
+                                .o_last_message_preview {
+                                    color: $font-color;
+                                }
+
+                                .o_no_activity {
+                                    color: $font-color;
+                                }
+                            }
+                        }
+
+                        .o_mail_systray_dropdown_top {
+                            border-color: $border !important;
+
+                            .btn-link {
+                                &.active, &:hover, &:focus {
+                                    color: $btn-primary;
+                                }
+                            }
+                            button {
+                                color: $font-color;
+                                &.active {
+                                    color: $btn-primary;
+                                }
+                            }
+                        }
+
+                        .o_mail_systray_dropdown_items {
+                            .o_no_activity {
+                                color: $font-color;
+
+                                &:hover, &:active, &:focus {
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                    }
+                }
+                .o_mail_mobile_tabs {
+                    background-color: $night-light;
+                    box-shadow: none;
+                    .o_mail_mobile_tab {
+                        color: $font-color !important;
+                        &.active {
+                            background: unset;
+                            box-shadow: none;
+                            border-top: 2px solid $btn-primary;
+                            & > * {
+                                color: $font-color !important;
+                            }
+                        }
+                    }
+                }
+                & > li {
+                    background-color: $night-light;
+                    & > a {
+                        background-color: $night-light;
+                        color: $font-color;
+                        .oe_topbar_name {
+                            &:before {
+                                color: $font-color;
+                            }
+                        }
+                    }
+                    &.show {
+                        & > a {
+                            background-color: $btn-primary;
+                        }
+                    }
+                    .dropdown-menu {
+                        background-color: $btn-secondary;
+                        .ad_user_details_box {
+                            & > li {
+                                & > a {
+                                    color: $font-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        ul#av_full_view {
+            .fa.fa-bars {
+                color: $font-color;
+            }
+        }
+        #o_menu_sections.o_menu_sections {
+            background-color: $btn-secondary;
+            a {
+                &.o_menu_header_lvl_1 , &.o_menu_header_lvl_2 {
+                    color: $font-color;
+                }
+            }
+            .dropdown-menu, .dropdown-menu > .dropdown-header {
+                background-color: $btn-secondary;
+                color: $font-color;
+                & > a {
+                    &:hover , &:focus {
+                        background-color: $btn-primary;
+                    }
+                }
+            }
+            .o_submenu_title {
+                .ad_main_menu_detals {
+                    .oe_menu_text {
+                        color: $font-color;
+                    }
+                }
+            }
+        }
+        /*.o_mail_systray_item {
+            .o_mail_systray_dropdown {
+                .o_mail_systray_dropdown_items {
+                    .o_mail_preview {
+                        background-color: $btn-secondary !important;
+                        .o_preview_title {
+                            .o_preview_name, .o_preview_counter, .o_last_message_date {
+                                color: $font-color;
+                            }
+                        }
+                        .o_last_message_preview {
+                            color: $font-color;
+                        }
+                    }
+                }
+            }
+        }*/
+    }
+}

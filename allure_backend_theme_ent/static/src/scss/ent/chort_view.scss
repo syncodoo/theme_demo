@@ -1,0 +1,39 @@
+@mixin ent-cohort-view(){
+	.o_cohort_view{
+		padding: 10px;
+		.table{
+			border-right: 1px solid $border;
+			thead, tfoot{
+				background-color: $tr-hover;
+				color: $Label;
+				&  > tr{
+					& > th{
+						border: 1px solid $border;
+						border-right: 0;
+					}
+					& > td{
+						border: 1px solid $border;
+						border-right: 0;
+					}
+				}
+			}
+			tbody{
+				&  > tr{
+					& > td{
+						border: 1px solid $border;
+						border-right: 0;
+					}
+					&:hover{
+						background-color: $tr-hover;
+						border-left: 0;
+						& > td:first-child{
+							&:before{
+								background-color: $brand-primary;
+							}
+						}
+					}
+				}	
+			}
+		}
+	}
+}

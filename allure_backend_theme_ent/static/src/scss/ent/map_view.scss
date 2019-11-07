@@ -1,0 +1,27 @@
+@mixin ent-map-view() {
+    .o_map_view {
+        padding: 5px;
+        .o_map_container {
+            z-index: 1;
+        }
+        .o_pin_list_container {
+            padding: 8px;
+            .o_pin_list_header {
+                .fa {
+                    color: $brand-secondary;
+                }
+            }
+            .o_pin_list_details {
+                & > li {
+                    padding: 3px 2px;
+                    margin-left: 5px;
+                    &:hover {
+                        background-color: $tr-hover;
+                        border-left: 5px solid $brand-primary;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}

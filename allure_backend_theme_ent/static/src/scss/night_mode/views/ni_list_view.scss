@@ -1,0 +1,87 @@
+@mixin sync_list_view() {
+    .o_list_view {
+        .table-responsive .o_list_table {
+            background: $night;
+
+            thead, tfoot {
+                background: $night;
+
+                & > tr {
+                    & > th, & > td {
+                        border: 0;
+                        color: $font-color;
+                    }
+                }
+            }
+
+            tbody {
+                & > tr {
+                    background-color: $btn-secondary;
+                    color: $font-color;
+
+                    & > td {
+                        border-color: $border;
+                        border-right: 0;
+
+                        &.o_list_record_remove {
+                            .fa {
+                                color: $font-color;
+                            }
+                        }
+
+                        .o_attachment {
+                            .o_attachment_download, .attech_link {
+                                color: $font-color;
+                                border: 0;
+                                background-color: $night;
+                            }
+                        }
+                    }
+                }
+
+                .o_group_header {
+                    background-color: $night-light !important;
+                    color: $font-color;
+                    background-image: none;
+                    border-top-color: $border;
+
+                    th {
+                        border-color: $border;
+                    }
+                }
+            }
+
+            tfoot {
+                & > tr {
+                    box-shadow: none;
+                    border-bottom: 0;
+                }
+            }
+
+            &.o_list_view_grouped {
+                border-color: $border;
+            }
+
+            .o_data_row.o_selected_row {
+                & > .o_data_cell {
+                    &:not(.o_readonly_modifier) {
+                        .o_input {
+                            background-color: $night;
+                        }
+
+                        .o_required_modifier .o_input, .o_required_modifier.o_input {
+                            background-color: $night !important;
+                            border-bottom: 1px solid $btn-primary;
+                        }
+                    }
+                }
+            }
+
+            .fa-external-link {
+                &:hover {
+                    background-color: transparent !important;
+                }
+            }
+        }
+    }
+}

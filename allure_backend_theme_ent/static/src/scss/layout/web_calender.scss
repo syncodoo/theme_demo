@@ -1,0 +1,72 @@
+// UI custom colors for tags, kanban records' colors, ...)
+// Note: the first value is the old BS3 gray-light value
+/*$al-colors: lighten(#000, 46.7%), $notbook, $button-box, $link, $brand-secondary, $Label-value,*/
+              /*$menu-main-title, $brand-primary, $heading, $Label, $tooltip, $border !default;*/
+
+/*$al-colors-secondary: $notbook, $button-box, $link, $brand-secondary, $Label-value, $menu-main-title,
+                     $brand-primary, $heading, $Label, $tooltip, $border, $brand-primary-light,
+                     $tr-header, $dashboard-dark-color, $light-color, $text-success, $text-primary, $text-info !default;*/
+
+$al-colors: $brand-secondary, $brand-primary, lighten(#000, 46.7%), $text-success, $text-primary, $text-info !default;
+
+$al-colors-secondary: #ca534f, #c48822 , #53A586, #4faed9, #6d78bf !default;
+
+// UI custom colors, complete list
+$al-colors-complete: join(
+    set-nth(set-nth($al-colors, 1, $brand-primary), 6, $brand-secondary),
+    $al-colors-secondary
+)!default;
+
+// UI custom colors, complete list
+$al-brand-complete: join(
+    set-nth(set-nth($al-colors, 1, $brand-primary), 6, $brand-secondary),
+    $al-colors-secondary
+)!default;
+
+.o_web_client {
+
+    @for $i from 1 through length($al-brand-complete) {
+        $color: nth($al-brand-complete, $i);
+
+        .o_calendar_view .fc-view {
+            .fc-event.o_calendar_color_#{$i} {
+                border-color: $color;
+                color: darken($color, 35%);
+
+                .fc-bg {
+                    background: mix($color, white);
+                }
+
+                &.o_cw_custom_hover, &.o_cw_custom_highlight {
+                    box-shadow: 0 12px 12px -5px rgba($color, 0.3);
+                    color: color-yiq($color);
+
+                    .fc-bg {
+                        background: $color;
+                    }
+                }
+            }
+        }
+
+        .o_cw_filter_color_#{$i} {
+            .o_cw_filter_input_bg {
+                border-color: $color;
+                background: $color;
+                color: color-yiq($color);
+            }
+        }
+
+        .o_cw_popover.o_calendar_color_#{$i} {
+            $color-subdle: mix(white, $color, 90%);
+
+            .card-header, .card-header .popover-header {
+                background-color: $color-subdle;
+                color: color-yiq($color-subdle);
+            }
+
+            .card-header {
+                border-color: mix($card-border-color, mix(white, $color));
+            }
+        }
+    }
+}
